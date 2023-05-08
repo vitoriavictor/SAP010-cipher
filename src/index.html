@@ -7,28 +7,26 @@
   </head>
   <body>
     <div class="cabecalho">
-      <h1>Criptografia</h1>
+      <h1>Comunicação criptografada</h1>
       <p>Seu sistema de mensagem segura</p>
     </div>
 
-    <div class="entrada">
-      <h3 id="entrada-mensagem">Digite sua mensagem:</h3>
-      <textarea rows=5 cols=80 id="texto-inicial" placeholder="Digite aqui sua mensagem"></textarea><br><br>
-      <p>Selecione sua opção de chave de deslocamento:</p>
-      <input type="number" id="offset" value="3"><br><br>
-      <button id="cifrar">Criptografar (Cifrar)</button>
-      <button id="decifrar">Descriptografar (Decifrar)</button>
-    </div>
-  
-    <div id="saida" class="saida">
-      <h3 id="saida-mensagem">Mensagem cifrada/decifrada:</h3>
-      <textarea rows=5 cols=80 id="texto-final" placeholder="Mensagem cifrada/decifrada aqui"></textarea><br>
-    </div>
-  
+    <label for="textoInicial">Digite sua mensagem:</label>
+    <textarea id="textoInicial" rows="5" cols="50" placeholder="Digite aqui sua mensagem"></textarea>
+    <label for="deslocamento">Deslocamento:</label>
+    <input type="number" id="deslocamento" value="3" min="0" max="25"></br></br>
+    <label for="textoFinal">Mensagem cifrada/decifrada:</label>
+    <textarea id="textoFinal" rows="5" cols="50" placeholder="Mensagem cifrada/decifrada aqui"></textarea>
+    <br>
+    <button id="btn-cifrar" onclick="cifrarMensagem()">Criptografar (Cifrar)</button>
+    <button id="btn-decifrar" onclick="decifrarMensagem()">Descriptografar (Decifrar)</button>
+    <br><br>
+
     <div class="rodape">
-      <button id="limpar">Limpar tudo</button>
+      <button id="limpar" onclick="limparMensagem()" >Limpar tudo</button>
     </div>
 
-    <script src="index.js" type="module"></script>
+    <script type="module" src="./index.js"></script>
+
   </body>
 </html>
