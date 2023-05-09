@@ -6,27 +6,32 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="cabecalho">
-      <h1>Comunicação criptografada</h1>
-      <p>Seu sistema de mensagem segura</p>
-    </div>
-
-    <label for="textoInicial">Digite sua mensagem:</label>
-    <textarea id="textoInicial" rows="5" cols="50" placeholder="Digite aqui sua mensagem"></textarea>
-    <label for="deslocamento">Deslocamento:</label>
-    <input type="number" id="deslocamento" value="3" min="0" max="25"></br></br>
-    <label for="textoFinal">Mensagem cifrada/decifrada:</label>
-    <textarea id="textoFinal" rows="5" cols="50" placeholder="Mensagem cifrada/decifrada aqui"></textarea>
-    <br>
-    <button id="btn-cifrar" onclick="cifrarMensagem()">Criptografar (Cifrar)</button>
-    <button id="btn-decifrar" onclick="decifrarMensagem()">Descriptografar (Decifrar)</button>
-    <br><br>
-
-    <div class="rodape">
-      <button id="limpar" onclick="limparMensagem()" >Limpar tudo</button>
-    </div>
-
+    <div class="backgroundImage">
+      <div class="cabecalho">
+        <h1>Comunicação criptografada</h1>
+        <p>Seu sistema de mensagem segura</p>
+      </div>
+      <div class="caixasTexto">
+        <label for="textoInicial">Digite sua mensagem:</label>
+        <br>
+        <textarea id="textoInicial" rows="5" cols="50" placeholder="Digite aqui sua mensagem"></textarea>
+        <br>
+        <label for="deslocamento">Deslocamento:</label>
+        <input type="number" id="deslocamento" value="3" min="0" max="25"><br><br>
+        <button id="btn-cifrar">Criptografar (Cifrar)</button>
+        <br><br>
+        <label for="textoFinal">Mensagem cifrada/decifrada:</label>
+        <br>
+        <textarea id="textoFinal" rows="5" cols="50" placeholder="Mensagem cifrada/decifrada aqui"></textarea>
+        <br><br>
+        <button id="btn-decifrar">Descriptografar (Decifrar)</button>
+        <br>
+        <button id="limpar">Limpar tudo</button>
+        <br><br>
+      </div>
     <script type="module" src="./index.js"></script>
-
   </body>
+  <footer>
+    <p>Desenvolvido por Vitória Victor</p>
+  </footer>
 </html>

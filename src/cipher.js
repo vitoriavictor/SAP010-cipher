@@ -1,5 +1,4 @@
 const cipher = {encode, decode};
-
 // aqui você deve implementar o objeto cipher, o qual já está exportado no boilerplate. 
 //Este objeto (cipher) deve conter dois métodos:
 //cipher.encode(offset, string): offset é o número de posições que queremos mover para a direita no alfabeto e string é a mensagem (texto) que queremos cifrar.
@@ -22,8 +21,6 @@ function encode(deslocamento, mensagem) {
   }
   return result;
 }
-
-
 function decode(deslocamento, mensagemCifrada) {
   let result = "";
   if (typeof mensagemCifrada !== "string" || typeof deslocamento !== "number") {
@@ -40,8 +37,6 @@ function decode(deslocamento, mensagemCifrada) {
     } 
     result += String.fromCharCode(codigo);
   }
-
   return result;
 }
-
 export default cipher;
