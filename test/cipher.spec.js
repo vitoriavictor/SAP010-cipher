@@ -40,6 +40,9 @@ describe('cipher', () => {
     it('should return "hijklmnopqrstuvwxyzabcdefg" for "abcdefghijklmnopqrstuvwxyz" with offset 33', () => {
       expect(cipher.encode(33, 'abcdefghijklmnopqrstuvwxyz')).toBe('hijklmnopqrstuvwxyzabcdefg');
     });
+    it('should return "5678901234fF" for "0123456789aA" with offset 5', () => {
+      expect(cipher.encode(5, '0123456789aA')).toBe('5678901234fF');
+    });
     it('should return "5678901234" for "0123456789" with offset 5', () => {
       expect(cipher.encode(5, '0123456789')).toBe('5678901234');
     });
@@ -88,6 +91,9 @@ describe('cipher', () => {
     });
     it('should return "0123456789" for "5678901234" with offset 5', () => {
       expect(cipher.decode(5, '5678901234')).toBe('0123456789');
+    });
+    it('should return "0123456789aA" for "5678901234fF" with offset 5', () => {
+      expect(cipher.decode(5, '5678901234fF')).toBe('0123456789aA');
     });
     // Hacker edition
     //
